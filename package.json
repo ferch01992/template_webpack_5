@@ -1,0 +1,47 @@
+{
+  "name": "profile",
+  "version": "1.0.0",
+  "description": "my profile",
+  "main": "index.js",
+  "scripts": {
+    "build": "NAME=$npm_package_name VERSION=$npm_package_version webpack --config webpack/webpack.prod.js",
+    "dev": "NAME=$npm_package_name VERSION=$npm_package_version webpack-dev-server --progress --config webpack/webpack.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fercho0/Profile.git"
+  },
+  "keywords": [
+    "React",
+    "Webpack5",
+    "Redux",
+    "Material-UI",
+    "Firebase"
+  ],
+  "author": "Fernando.lc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fercho0/Profile/issues"
+  },
+  "homepage": "https://github.com/fercho0/Profile#readme",
+  "devDependencies": {
+    "@babel/core": "7.15.8",
+    "@babel/preset-env": "7.15.8",
+    "@babel/preset-react": "7.14.5",
+    "babel-loader": "8.2.3",
+    "css-loader": "6.4.0",
+    "file-loader": "6.2.0",
+    "html-webpack-plugin": "5.4.0",
+    "style-loader": "3.3.1",
+    "webpack": "5.59.0",
+    "webpack-cli": "4.9.1",
+    "webpack-dev-server": "4.3.1",
+    "webpack-merge": "^5.8.0",
+    "webpackbar": "^5.0.0-3"
+  },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  }
+}
