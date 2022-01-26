@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "NAME=$npm_package_name VERSION=$npm_package_version webpack --config webpack/webpack.prod.js",
-    "dev": "NAME=$npm_package_name VERSION=$npm_package_version webpack-dev-server --progress --config webpack/webpack.dev.js",
+    "de": "NAME=$npm_package_name VERSION=$npm_package_version webpack-dev-server --progress --config webpack/webpack.dev.js",
+    "dev": "SET VERSION_APP=%npm_package_version%& SET NAME=%npm_package_name%& webpack-dev-server --progress --config webpack/webpack.dev.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

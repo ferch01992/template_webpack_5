@@ -9,12 +9,6 @@ module.exports = {
     allowedHosts :  'all',
     client       : { overlay : true, progress : true },
     watchFiles   : [ 'src/**/*' ],
-    open         : {
-        target : ['/'],
-        app    : {
-          name : 'google-chrome',
-          arguments : [ '--incognito', '--new-window' ]
-        }
-    }
+    open         : true
 };
 
