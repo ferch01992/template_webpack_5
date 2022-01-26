@@ -1,6 +1,6 @@
-const path              = require( 'path' );
+const path              = require( 'path' )
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const WebpackBar        = require('webpackbar');
+const WebpackBar        = require('webpackbar')
 
 module.exports = ( VERSION_APP, NAME_APP ) => [
 
@@ -14,4 +14,4 @@ module.exports = ( VERSION_APP, NAME_APP ) => [
 		cache    : true,
 		version  : VERSION_APP
 	} )
-]
+];

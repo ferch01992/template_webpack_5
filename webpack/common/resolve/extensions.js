@@ -1,1 +1,1 @@
-module.exports = [ '.js', '.jsx', '.json' ]
+module.exports = [ '.js', '.jsx', '.json' ];

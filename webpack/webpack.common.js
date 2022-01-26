@@ -2,8 +2,8 @@ const path = require( 'path' );
 
 const DATE        = new Date();
 const TIME        = DATE.getTime();
-const VERSION_APP = process.env.VERSION
-const NAME_APP    = process.env.NAME
+const VERSION_APP = process.env.VERSION;
+const NAME_APP    = process.env.NAME;
 
 const MODULE     = require('./common/module/modules.js');
 const ALIAS      = require('./common/resolve/alias.js');
@@ -14,7 +14,7 @@ const PLUGINS    = require('./common/plugins/plugins.js');
 module.exports = {
 	entry   : {
 		[ NAME_APP ] : {
-			import   : path.resolve(__dirname, './../src/index.js'),
+			import   : path.resolve( __dirname, './../src/index.js'),
 			filename : `js/[name].${VERSION_APP}.${TIME}.[contenthash].js`,
 		}
 	},
@@ -34,4 +34,4 @@ module.exports = {
 	resolve : { extensions : EXTENSIONS, alias : ALIAS },
 
 	plugins : PLUGINS( VERSION_APP, NAME_APP )
-}
+};

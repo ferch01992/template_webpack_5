@@ -4,7 +4,7 @@ module.exports = {
 			test: /\.(js|jsx)$/,
 			exclude: /node_modules/,
 			use: {
-			  loader: 'babel-loader'
+				loader: 'babel-loader'
 			},
 		},
 		{
@@ -12,4 +12,4 @@ module.exports = {
 			use: ['style-loader', 'css-loader']
 		}
 	]
-}
+};
