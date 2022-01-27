@@ -66,8 +66,8 @@
   },
   "lint-staged": {
     "src/*.{js,jsx}": [
-      "npm run prettier:check",
-      "npm run lint",
+      "npm prettier:check",
+      "npm lint",
       "git add"
     ],
     "*.{html,css,less,ejs}": [
