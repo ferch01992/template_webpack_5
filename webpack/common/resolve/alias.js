@@ -1,8 +1,6 @@
-const path = require( 'path' );
+const path = require('path');
 
 module.exports = {
-	_ : [
-		path.resolve( __dirname, 'PENDIENTE' ),
-	],
-	//Conponents : path.resolve( __dirname, 'PENDIENTE' ),
+  _: [path.resolve(__dirname, 'PENDIENTE')],
+  // Conponents : path.resolve( __dirname, 'PENDIENTE' ),
 };
