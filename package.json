@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "lintFix": "eslint . --fix",
     "prettier:check": "prettier --c .",
-    "prettier:fix": "prettier --write ."
+    "prettier:fix": "prettier --write .",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
