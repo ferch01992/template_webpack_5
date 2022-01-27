@@ -60,13 +60,19 @@
     "standard": "16.0.4"
   },
   "husky": {
-    "hooks":{
-      "pre-commit":"lint-staged"
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
   },
-  "lint-staged":{
-    "src/*.{js,jsx}":[
-      "npm lint"
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{html,css,less,ejs}": [
+      "prettier --write",
+      "git add"
     ]
   }
 }
