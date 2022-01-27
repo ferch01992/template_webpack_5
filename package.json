@@ -9,7 +9,7 @@
     "dev": "SET VERSION_APP=%npm_package_version%& SET NAME=%npm_package_name%& webpack-dev-server --progress --config webpack/webpack.dev.js",
     "lint": "eslint .",
     "lintFix": "eslint . --fix",
-    "prettier:check": "prettier --c"
+    "prettier:check": "prettier --c ."
   },
   "repository": {
     "type": "git",
@@ -66,8 +66,8 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "prettier --write",
-      "eslint --fix",
+      "npm run prettier:check",
+      "npm run lint",
       "git add"
     ],
     "*.{html,css,less,ejs}": [
