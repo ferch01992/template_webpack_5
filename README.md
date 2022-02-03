@@ -1,4 +1,5 @@
 # Profile
+
 Personal profile
 
 inicializar Eslint
@@ -7,3 +8,5 @@ inicializar Eslint
 npm init @eslint/configi
 ./node_modules/.bin/eslint --init
 ´´´
+
+npm search stylelint-config

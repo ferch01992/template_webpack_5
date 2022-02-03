@@ -1,22 +1,24 @@
 const path = require('path');
+const moduleCom = require('./common/modules/moduleCom.js');
+const pluginCom = require('./common/plugins/pluginCom.js');
+const aliasCom = require('./common/resolve/aliasCom.js');
+const extensionCom = require('./common/resolve/extensionCom.js');
 
-const DATE = new Date();
-const TIME = DATE.getTime();
-const VERSION_APP = process.env.VERSION;
-const NAME_APP = process.env.NAME;
-
-const MODULE = require('./common/module/modules.js');
-const ALIAS = require('./common/resolve/alias.js');
-const EXTENSIONS = require('./common/resolve/extensions.js');
-const PLUGINS = require('./common/plugins/plugins.js');
+const TIME = new Date().getTime();
+const { VERSION_APP, NAME_APP } = process.env;
 
 module.exports = {
   entry: {
     [NAME_APP]: {
-      import: path.resolve(__dirname, './../src/index.js'),
       filename: `js/[name].${VERSION_APP}.${TIME}.[contenthash].js`,
+      import: [
+        path.resolve(__dirname, './../src/index.js'),
+        path.resolve(__dirname, './../src/assets/styles/index.scss'),
+      ],
     },
   },
+
+  module: moduleCom(VERSION_APP, TIME),
 
   output: {
     chunkFilename: `js/[id].${VERSION_APP}.${TIME}.[contenthash].js`,
@@ -25,12 +27,11 @@ module.exports = {
     filename: `js/[name].${VERSION_APP}.${TIME}.[contenthash].js`,
     path: path.resolve(__dirname, 'public'),
     pathinfo: true,
+    publicPath: '/',
     uniqueName: NAME_APP,
   },
 
-  module: MODULE,
+  plugins: pluginCom(VERSION_APP, NAME_APP),
 
-  resolve: { extensions: EXTENSIONS, alias: ALIAS },
-
-  plugins: PLUGINS(VERSION_APP, NAME_APP),
+  resolve: { alias: aliasCom, extensions: extensionCom },
 };

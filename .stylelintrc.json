@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss"
+  ],
+  "overrides": [
+    {
+      "files": ["src/assets/styles/**/*.scss"],
+      "rules": {}
+    }
+  ]
+}

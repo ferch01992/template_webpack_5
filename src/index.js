@@ -1,8 +1,10 @@
+import Home from 'Module/home.jsx';
 import React from 'react';
 import ReactDom from 'react-dom';
-import Ejemplo from './ejemplo.jsx';
-let example = '!21212';
-ReactDom.render(
-  <Ejemplo titulo="Hola Ejemplo" />,
-  document.getElementById('app')
+
+console.log(
+  '%c<== F . L . C ==>',
+  'color:#FF8A71;font-size:2rem;font-weight:bold;'
 );
+
+ReactDom.render(<Home />, document.getElementById('app'));

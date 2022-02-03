@@ -1,13 +1,15 @@
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
-const DEV_SERVER = require('./development/server/server.js');
-
+const devServer = require('./development/server/serverDev.js');
+const moduleDev = require('./development/modules/moduleDev.js');
 module.exports = merge(common, {
+  devServer,
+
+  devtool: 'source-map',
+
   mode: 'development',
 
-  devtool: 'inline-source-map',
+  module: moduleDev,
 
   watchOptions: { ignored: /node_modules/ },
-
-  devServer: DEV_SERVER,
 });

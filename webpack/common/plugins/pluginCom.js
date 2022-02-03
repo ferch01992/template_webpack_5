@@ -2,15 +2,17 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackBar = require('webpackbar');
 
-module.exports = (VERSION_APP, NAME_APP) => [
-  new WebpackBar({ name: NAME_APP, color: '#ff4081' }),
+const pluginCom = (VERSION_APP, NAME_APP) => [
+  new WebpackBar({ color: '#ff4081', name: NAME_APP }),
 
   new HtmlWebpackPlugin({
-    title: NAME_APP,
-    filename: 'index.html',
-    // favicon  : 'PENDIENTE',
-    template: path.resolve(__dirname, './../../../src/index.ejs'),
     cache: true,
+    filename: 'index.html',
+    template: path.resolve(__dirname, './../../../src/index.ejs'),
+    title: NAME_APP,
+    // favicon  : 'PENDIENTE',
     version: VERSION_APP,
   }),
 ];
+
+module.exports = pluginCom;
