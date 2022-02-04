@@ -1,7 +1,7 @@
 {
-  "name": "profile",
+  "name": "template",
   "version": "1.0.0",
-  "description": "my profile",
+  "description": "template app react",
   "main": "index.js",
   "scripts": {
     "build": "SET VERSION_APP=%npm_package_version%& SET NAME_APP=%npm_package_name%& webpack --config webpack/webpack.prod.js",
@@ -56,10 +56,11 @@
     "prettier": "2.5.1",
     "sass": "1.49.7",
     "sass-loader": "12.4.0",
+    "standard": "16.0.4",
     "style-loader": "3.3.1",
-    "stylelint": "^14.3.0",
+    "stylelint": "14.3.0",
     "stylelint-config-prettier-scss": "0.0.1",
-    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-config-standard-scss": "3.0.0",
     "webpack": "5.59.0",
     "webpack-cli": "4.9.1",
     "webpack-dev-server": "4.3.1",
@@ -69,7 +70,13 @@
   "dependencies": {
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "standard": "16.0.4"
+    "react-redux": "7.2.6",
+    "react-router": "^6.2.1",
+    "react-router-dom": "6.2.1",
+    "redux": "4.1.2",
+    "redux-localstorage": "0.4.1",
+    "redux-localstorage-filter": "0.1.1",
+    "redux-thunk": "2.4.1"
   },
   "husky": {
     "hooks": {

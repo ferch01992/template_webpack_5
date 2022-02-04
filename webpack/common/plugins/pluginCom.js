@@ -7,10 +7,10 @@ const pluginCom = (VERSION_APP, NAME_APP) => [
 
   new HtmlWebpackPlugin({
     cache: true,
+    favicon: path.resolve(__dirname, './../../../src/assets/images/logo.svg'),
     filename: 'index.html',
     template: path.resolve(__dirname, './../../../src/index.ejs'),
     title: NAME_APP,
-    // favicon  : 'PENDIENTE',
     version: VERSION_APP,
   }),
 ];

@@ -1,12 +1,14 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Title = React.memo(({ titulo }) => (
-  <h1 className="gradient__text "> {titulo} </h1>
+let hola = 'Hola';
+     const Title = React.memo(({ titulo }) => (
+  			<h1 className="gradient-tex"> {titulo} </h1>
 ));
 
 Title.propTypes = {
-  titulo: PropTypes.string,
+			  titulo: PropTypes.string,
+  aaaa: PropTypes.string,
 };
 
 Title.displayName = 'Title';
