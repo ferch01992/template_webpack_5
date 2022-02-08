@@ -10,3 +10,5 @@ npm init @eslint/configi
 ´´´
 
 npm search stylelint-config
+
+git config --global core.autocrlf false

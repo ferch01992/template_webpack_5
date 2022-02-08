@@ -16,16 +16,19 @@ module.exports = {
   },
   parserOptions: {
     ecmaFeatures: {
-      js: true,
       jsx: true,
-      scss: true,
     },
     ecmaVersion: 12,
     sourceType: 'module',
   },
   plugins: ['react', 'prettier'],
   rules: {
-    'prettier/prettier': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
     'sort-imports': [
       'error',
       {

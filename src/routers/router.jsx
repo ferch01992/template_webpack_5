@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Container from './../containers/containerGeneral.jsx';
 import Home from './../module/home/home.jsx';
 
@@ -7,18 +7,16 @@ import React from 'react';
 
 const Routers = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Container>
-              <Home />
-            </Container>
-          }
-        />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <Container>
+            <Home />
+          </Container>
+        }
+      />
+    </Routes>
   );
 };
 
