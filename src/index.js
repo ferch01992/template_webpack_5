@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 
 import React from 'react';
-import Router from './routers/router.jsx';
+import Routers from './routers/router.jsx';
 import { render } from 'react-dom';
 console.log(
   '%c<== F . L . C ==>',
@@ -10,4 +10,9 @@ console.log(
 
 const APP = document.getElementById('app');
 
-render(<Router history={BrowserRouter} />, APP);
+render(
+  <BrowserRouter>
+    <Routers />
+  </BrowserRouter>,
+  APP
+);

@@ -4,7 +4,7 @@ import React from 'react';
 const ContainerGeneral = React.memo(props => <div> {props.children} </div>);
 
 ContainerGeneral.propTypes = {
-  titulo: PropTypes.string,
+  children: PropTypes.node.isRequired,
 };
 
 ContainerGeneral.displayName = 'ContainerGeneral';

@@ -8,7 +8,7 @@
     "buildd": "NAME_APP=$npm_package_name VERSION_APP=$npm_package_version webpack --config webpack/webpack.prod.js",
     "de": "NAME_APP=$npm_package_name VERSION=$npm_package_version webpack-dev-server --progress --config webpack/webpack.dev.js",
     "dev": "SET VERSION_APP=%npm_package_version%& SET NAME_APP=%npm_package_name%& webpack-dev-server --progress --config webpack/webpack.dev.js",
-    "lint:check": "eslint .",
+    "lint:check": "eslint src/** .",
     "lint:fix": "eslint . --fix",
     "style:check": "stylelint src/assets/styles/**/*.scss",
     "style:fix": "stylelint src/assets/styles/**/*.scss --fix",
@@ -68,10 +68,13 @@
     "webpackbar": "5.0.0-3"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.4.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-redux": "7.2.6",
-    "react-router": "^6.2.1",
+    "react-router": "6.2.1",
     "react-router-dom": "6.2.1",
     "redux": "4.1.2",
     "redux-localstorage": "0.4.1",
