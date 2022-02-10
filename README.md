@@ -1,10 +1,4 @@
 <div id="top"></div>
-<style>
-  @font-face {
-      font-family: 'Manrope', sans-serif;
-      src: url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
-    }
-</style>
 <center>
   <h1 style="
   background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
