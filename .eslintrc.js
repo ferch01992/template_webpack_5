@@ -14,6 +14,7 @@ module.exports = {
     navigator: true,
     window: true,
   },
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -32,8 +33,9 @@ module.exports = {
     'sort-imports': [
       'error',
       {
+        allowSeparatedGroups: false,
         ignoreCase: false,
-        ignoreDeclarationSort: false,
+        ignoreDeclarationSort: true,
         ignoreMemberSort: false,
         memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
       },
