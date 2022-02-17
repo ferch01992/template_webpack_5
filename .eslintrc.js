@@ -36,7 +36,7 @@ module.exports = {
         allowSeparatedGroups: false,
         ignoreCase: false,
         ignoreDeclarationSort: true,
-        ignoreMemberSort: false,
+        ignoreMemberSort: true,
         memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
       },
     ],

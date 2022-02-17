@@ -4,6 +4,7 @@ const devServer = {
   allowedHosts: 'all',
   client: { overlay: true, progress: true },
   compress: true,
+  historyApiFallback: true,
   host: '127.0.0.1',
   hot: true,
   open: true,
