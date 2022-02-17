@@ -14,6 +14,8 @@ module.exports = {
       import: [
         path.resolve(__dirname, './../src/index.js'),
         path.resolve(__dirname, './../src/assets/styles/index.scss'),
+        path.resolve(__dirname, './../src/assets/styles/module.scss'),
+        path.resolve(__dirname, './../src/assets/styles/components.scss'),
       ],
     },
   },

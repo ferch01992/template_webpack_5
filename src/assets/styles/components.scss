@@ -1,0 +1,30 @@
+@import './variables';
+@import './fonts';
+
+.container-error-404 {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  flex-direction: column;
+}
+
+.container-error-404 > img {
+  width: 300px;
+  height: 200px;
+}
+
+.container-error-404 > p {
+  margin-top: 10px;
+  color: #686c75;
+  font-family: $manrope;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 17px;
+  line-height: 27px;
+}

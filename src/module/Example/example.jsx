@@ -13,7 +13,7 @@ import {
   actionSetLevel1,
   actionSetLevel2,
   actionSetLevel3,
-} from '../../store/actions/actionsLevel1';
+} from 'StoreActions/actionsLevel1';
 import { bindActionCreators } from 'redux';
 
 class Example extends Component {
@@ -25,6 +25,10 @@ class Example extends Component {
       actionSetLevel2('propertyLevel2', 'Set property level 2 ✅');
     } else if (nameButton === 'lavel3') {
       actionSetLevel3('propertyLevel3', 'Set property level 3 ✅');
+    } else if (nameButton === 'reset') {
+      actionSetLevel1('propertyLevel1', 'propertyLevel1');
+      actionSetLevel2('propertyLevel2', 'propertyLevel2');
+      actionSetLevel3('propertyLevel3', 'propertyLevel3');
     } else {
       console.log('Action undefined');
     }
