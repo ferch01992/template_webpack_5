@@ -1,10 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WebpackBar = require('webpackbar');
 
 const pluginCom = (VERSION_APP, NAME_APP) => [
-  new WebpackBar({ color: '#ff4081', name: NAME_APP }),
-
   new HtmlWebpackPlugin({
     cache: true,
     favicon: path.resolve(__dirname, './../../../src/assets/images/logo.svg'),

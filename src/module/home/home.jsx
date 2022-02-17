@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import Title from 'Components/title.jsx';
 import imageEslint from 'Images/eslint.svg';
@@ -7,11 +6,12 @@ import imageReact from 'Images/react.svg';
 import imageRedux from 'Images/redux.svg';
 import imageSass from 'Images/sass.svg';
 import imageWebpack from 'Images/webpack.svg';
+import { Link } from 'react-router-dom';
 
 const Home = React.memo(() => (
   <div className="container">
     <div className="container-bac">
-      <Title titulo="< F . L . C />" />
+      <Title titulo="Template Webpack 5" />
     </div>
     <div className="container-bac">
       <img src={imageReact} className="image image-animation" alt="React" />
@@ -21,13 +21,11 @@ const Home = React.memo(() => (
       <img src={imageEslint} className="image image-animation" alt="Eslint" />
       <img src={imageWebpack} className="image image-animation" alt="Webpack" />
     </div>
+    <Link className="text-lint" to="/example">
+      Example Redux
+    </Link>
   </div>
 ));
-
-Home.propTypes = {
-  titulo: PropTypes.string,
-};
-
 Home.displayName = 'Home';
 
 export default Home;
