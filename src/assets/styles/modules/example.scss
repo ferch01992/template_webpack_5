@@ -1,0 +1,58 @@
+.tree-view-text {
+  margin-top: 10px;
+  color: #686c75;
+  font-family: $manrope;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 27px;
+  text-decoration: none;
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  flex-direction: column;
+}
+
+.container-bac {
+  margin: 15px;
+  background: none;
+}
+
+.text-lint {
+  margin-top: 10px;
+  color: #686c75;
+  font-family: $manrope;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 27px;
+  text-decoration: none;
+  text-align: end;
+  width: 50%;
+}
+
+button {
+  border: 1px solid #fff;
+  margin: 5px;
+  width: 174px;
+  height: 50px;
+  font-family: $manrope;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+}
+
+button:hover {
+  border: 1px solid #fff;
+  background: #fff;
+  color: rgb(4 12 24 / 100%);
+}

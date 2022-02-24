@@ -13,9 +13,9 @@ import {
   actionSetLevel1,
   actionSetLevel2,
   actionSetLevel3,
-} from '../../store/actions/actionsLevel1';
+} from 'Actions/actionsLevel1';
+import { actionSetPruebaPersis } from 'Actions/actionsPruebaPersis';
 import { bindActionCreators } from 'redux';
-
 class Example extends Component {
   onClikButton = nameButton => {
     const { actionSetLevel1, actionSetLevel2, actionSetLevel3 } = this.props;
@@ -25,13 +25,22 @@ class Example extends Component {
       actionSetLevel2('propertyLevel2', 'Set property level 2 ✅');
     } else if (nameButton === 'lavel3') {
       actionSetLevel3('propertyLevel3', 'Set property level 3 ✅');
+    } else if (nameButton === 'reset') {
+      actionSetLevel1('propertyLevel1', 'propertyLevel1');
+      actionSetLevel2('propertyLevel2', 'propertyLevel2');
+      actionSetLevel3('propertyLevel3', 'propertyLevel3');
     } else {
       console.log('Action undefined');
     }
   };
 
+  onClikButtonP = persistencia => {
+    const { actionSetPruebaPersis } = this.props;
+    actionSetPruebaPersis(persistencia);
+  };
+
   render() {
-    const { level1 } = this.props;
+    const { level1, pruebaPersistencia } = this.props;
     return (
       <div className="container">
         <div className="container-bac">
@@ -70,6 +79,11 @@ class Example extends Component {
           </button>
           <button onClick={() => this.onClikButton('reset')}>{'Reset'}</button>
         </div>
+        <div>
+          <button onClick={() => this.onClikButtonP('aa')}>
+            {`Esta en ${pruebaPersistencia}`}
+          </button>
+        </div>
         <Link className="text-lint" to="/">
           Home
         </Link>
@@ -80,6 +94,7 @@ class Example extends Component {
 
 const mapStateToProps = state => ({
   level1: state.level1,
+  pruebaPersistencia: state.pruebaPersistencia,
 });
 
 const mapDispatchToProps = dispatch =>
@@ -88,6 +103,7 @@ const mapDispatchToProps = dispatch =>
       actionSetLevel1,
       actionSetLevel2,
       actionSetLevel3,
+      actionSetPruebaPersis,
     },
     dispatch
   );
@@ -96,7 +112,13 @@ Example.propTypes = {
   actionSetLevel1: PropTypes.func,
   actionSetLevel2: PropTypes.func,
   actionSetLevel3: PropTypes.func,
+  actionSetPruebaPersis: PropTypes.func,
   level1: PropTypes.object,
+  pruebaPersistencia: PropTypes.any,
+};
+
+Example.defaultProps = {
+  pruebaPersistencia: false,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Example);

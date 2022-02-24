@@ -72,8 +72,8 @@
     "@emotion/react": "11.7.1",
     "@emotion/styled": "11.6.0",
     "@mui/icons-material": "5.4.2",
-    "@mui/material": "5.4.1",
     "@mui/lab": "5.0.0-alpha.69",
+    "@mui/material": "5.4.1",
     "@mui/styles": "5.4.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -81,8 +81,7 @@
     "react-router": "6.2.1",
     "react-router-dom": "6.2.1",
     "redux": "4.1.2",
-    "redux-localstorage": "0.4.1",
-    "redux-localstorage-filter": "0.1.1",
+    "redux-persist": "6.0.0",
     "redux-thunk": "2.4.1"
   },
   "husky": {

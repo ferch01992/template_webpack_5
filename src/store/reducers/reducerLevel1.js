@@ -1,4 +1,4 @@
-import { ACTION_LAVEL } from '../constans/constanStore';
+import { ACTION_LAVEL } from 'StoreConstans/constanStore';
 
 export default (state = {}, action = {}) => {
   if (!state) {

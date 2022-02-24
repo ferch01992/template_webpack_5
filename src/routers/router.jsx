@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
-import Container from './../containers/containerGeneral.jsx';
-import Home from './../module/home/home.jsx';
-import Example from './../module/example/example.jsx';
+import Container from 'Conteiners/containerGeneral.jsx';
+import Home from 'Module/home/home.jsx';
+import Example from 'Module/example/example.jsx';
 import Error404 from 'Components/error404.jsx';
 
 import PropTypes from 'prop-types';
