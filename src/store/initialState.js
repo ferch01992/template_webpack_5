@@ -8,4 +8,5 @@ export const initialState = {
     },
     propertyLevel1: 'propertyLevel1',
   },
+  pruebaPersistencia: true,
 };

@@ -1,5 +1,13 @@
-@import './variables';
-@import './fonts';
+.tree-view-text {
+  margin-top: 10px;
+  color: #686c75;
+  font-family: $manrope;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 27px;
+  text-decoration: none;
+}
 
 .container {
   justify-content: center;
@@ -19,25 +27,17 @@
   background: none;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.image {
-  width: 50px;
-  height: 50px;
-  margin: 10px;
-  background: none;
-}
-
-.image-animation {
-  animation: 3s rotate linear infinite;
+.text-lint {
+  margin-top: 10px;
+  color: #686c75;
+  font-family: $manrope;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 27px;
+  text-decoration: none;
+  text-align: end;
+  width: 50%;
 }
 
 button {

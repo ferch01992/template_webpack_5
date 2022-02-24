@@ -1,13 +1,15 @@
 const path = require('path');
 
+const _ = './../../../';
+
 const aliasCom = {
-  Components: path.resolve(__dirname, './../../../src/components'),
-  Conteiners: path.resolve(__dirname, './../../../src/containers'),
-  Images: path.resolve(__dirname, './../../../src/assets/images'),
-  Module: path.resolve(__dirname, './../../../src/module'),
-  StoreActions: path.resolve(__dirname, './../../../src/store/actions'),
-  StoreConstans: path.resolve(__dirname, './../../../src/store/constans'),
-  StoreReducers: path.resolve(__dirname, './../../../src/store/reducers'),
+  Actions: path.resolve(__dirname, `${_}src/store/actions`),
+  Components: path.resolve(__dirname, `${_}src/components`),
+  Conteiners: path.resolve(__dirname, `${_}src/containers`),
+  Images: path.resolve(__dirname, `${_}src/assets/images`),
+  Module: path.resolve(__dirname, `${_}src/module`),
+  Reducers: path.resolve(__dirname, `${_}src/store/reducers`),
+  StoreConstans: path.resolve(__dirname, `${_}src/store/constans`),
 };
 
 module.exports = aliasCom;

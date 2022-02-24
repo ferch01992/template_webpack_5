@@ -4,9 +4,12 @@ import { Provider } from 'react-redux';
 import React from 'react';
 import Routers from './routers/router.jsx';
 
+import { PersistGate } from 'redux-persist/integration/react';
+
 import { render } from 'react-dom';
 
-import store from './store/configStore';
+import configStore from './store/configStore.js';
+const { persistor, store } = configStore;
 
 console.log(
   '%c<== F . L . C ==>',
@@ -17,9 +20,11 @@ const APP = document.getElementById('app');
 
 render(
   <Provider store={store}>
-    <BrowserRouter>
-      <Routers />
-    </BrowserRouter>
+    <PersistGate loading={null} persistor={persistor}>
+      <BrowserRouter>
+        <Routers />
+      </BrowserRouter>
+    </PersistGate>
   </Provider>,
   APP
 );

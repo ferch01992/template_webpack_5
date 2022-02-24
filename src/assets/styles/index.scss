@@ -1,42 +1,17 @@
+/* Variables Generales */
 @import './variables';
+
+/** Fuentes */
 @import './fonts';
+
+/** Modules */
+@import './modules/home';
+@import './modules/example';
+
+/** Components */
+@import './components/title';
+@import './components/error404';
 
 * {
   background: rgb(4 12 24 / 100%);
-}
-
-.gradient-tex {
-  background: $gradient-text;
-  font-family: $manrope;
-  font-size: 50px;
-  line-height: 75px;
-  font-weight: 800;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  margin: 0;
-}
-
-.tree-view-text {
-  margin-top: 10px;
-  color: #686c75;
-  font-family: $manrope;
-  font-style: normal;
-  font-weight: 200;
-  font-size: 12px;
-  line-height: 27px;
-  text-decoration: none;
-}
-
-.text-lint {
-  margin-top: 10px;
-  color: #686c75;
-  font-family: $manrope;
-  font-style: normal;
-  font-weight: 200;
-  font-size: 12px;
-  line-height: 27px;
-  text-decoration: none;
-  text-align: end;
-  width: 50%;
 }

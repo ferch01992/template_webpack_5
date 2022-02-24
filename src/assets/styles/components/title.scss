@@ -1,0 +1,13 @@
+@import './../variables';
+
+.gradient-tex {
+  background: $gradient-text;
+  font-family: $manrope;
+  font-size: 50px;
+  line-height: 75px;
+  font-weight: 800;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin: 0;
+}

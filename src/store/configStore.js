@@ -6,16 +6,31 @@ import { applyMiddleware, compose, createStore } from 'redux';
 
 import thunk from 'redux-thunk';
 
+import { persistStore, persistReducer } from 'redux-persist';
+
+import storageSession from 'redux-persist/lib/storage/session';
+
+import { WHITE_LIST } from 'StoreConstans/constantWhiteList';
+
+const persistConfig = {
+  key: 'template-webpack-5',
+  storage: storageSession,
+  version: 0,
+  whitelist: WHITE_LIST,
+};
+
+const persistedReducer = persistReducer(persistConfig, allReducers);
+
 const middleWareGeneral = store => next => action => next(action);
 
-const INITIAL_STORE = compose(applyMiddleware(thunk, middleWareGeneral))(
-  createStore
-);
+const ejemploCompose = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = INITIAL_STORE(
-  allReducers,
+const store = createStore(
+  persistedReducer,
   initialState,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  ejemploCompose(applyMiddleware(thunk, middleWareGeneral))
 );
 
-export default store;
+const persistor = persistStore(store);
+
+export default { persistor, store };
