@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": "./",
+    "paths": {
+      "Components/*": ["src/components/*"]
+    }
+  },
+  "excluir": [
+    "node_modules",
+    "**/node_modules/*",
+    "public",
+    "**/public/*",
+    "webpack",
+    "**/webpack/*",
+    ".husky",
+    "**/.husky/*"
+  ]
+}

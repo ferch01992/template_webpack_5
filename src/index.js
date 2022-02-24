@@ -9,7 +9,7 @@ import { render } from 'react-dom';
 import store from './store/configStore';
 
 console.log(
-  '%c<== F . L . C ==>',
+  '%c<== Template Webpack 5 ==>',
   'color:#FF8A71;font-size:2rem;font-weight:bold;'
 );
 

@@ -23,12 +23,4 @@ npm run style:check ||
   false;
 )
 
-echo '🤔 🤔 🤔 🤔 MUY BIEN... El CÓDIGO ME PARECE BIEN... INTENTAREMOS COMPILAR TU CÓDIGO 😈 😈 😈'
-
-npm run build ||
-(
-    echo '💢 😭 😭 🔨 💢 PUZZ...NO SE PUDO COMPILAR EL CÓDIGO. TENDRAS QUE CORREGIRLO. 💢 😱 😱 🔨 💢'
-    false;
-)
-
 echo '✅ 😄 😄 ✅ T Ú   G A N A S T E   E S T A   V E Z...  P E R O   N O S   V E R E M O S   P R O N T O   H U M A N O. 😱 😱 😱 😱'
