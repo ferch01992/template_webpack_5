@@ -3,7 +3,13 @@
     "jsx": "react",
     "baseUrl": "./",
     "paths": {
-      "Components/*": ["src/components/*"]
+      "Components/*": ["src/components/*"],
+      "Actions/*": ["src/store/actions/*"],
+      "Conteiners/*": ["src/containers/*"],
+      "Images/*": ["src/assets/images/*"],
+      "Module/*": ["src/module/*"],
+      "Reducers/*": ["src/store/reducers/*"],
+      "StoreConstans/*": ["src/store/constans/*"]
     }
   },
   "excluir": [
