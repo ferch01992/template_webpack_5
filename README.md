@@ -8,7 +8,7 @@
   font-family: $font-family;
   font-size: 50px;
   line-height: 75px;
-  font-weight: 800;
+  font-weight: 800;ls
   "> T e m p l a t e  -  W e b p a c k  -  5</h1>
 </center>
 <br />
@@ -39,6 +39,9 @@
       <a href="#librerias-generales-del-proyecto">Librerias generales del proyecto</a>
     </li>
     <li>
+      <a href="#Configuracion-de-marcadores-de-linea-lf">Configuración de marcadores de linea LF</a>
+    </li>
+    <li>
       <a href="#instalacion-de-dependencias">Instalacion de dependencias</a>
     </li>
     <li>
@@ -66,7 +69,7 @@
 
 ## **Pre-requisitos**
 
----
+--------------------------------------------------------------------------------
 
 ### **Software previo y requerido**
 
@@ -78,7 +81,7 @@
 
 <p align="right"><a href="#top">volver arriba 🔼</a></p>
 
----
+--------------------------------------------------------------------------------
 
 ### **Plugins previos y requeridos para VsCode**
 
@@ -97,7 +100,7 @@ para realizar la instalacion de manera correcta en su editor.
 
 <p align="right"><a href="#top">volver arriba 🔼</a></p>
 
----
+--------------------------------------------------------------------------------
 
 ## **Librerias generales del proyecto:**
 
@@ -112,7 +115,41 @@ para realizar la instalacion de manera correcta en su editor.
 
 <p align="right"><a href="#top">volver arriba 🔼</a></p>
 
----
+--------------------------------------------------------------------------------
+
+## **Configuración de marcadores de linea LF**
+
+> Ejecutar el siguiente comando para modificar  los  bytes que se colocan como marcadores al final de línea.
+
+[Documentación](https://qvault.io/clean-code/line-breaks-vs-code-lf-vs-crlf/)
+
+```sh
+git config --global core.autocrlf false
+```
+
+LF
+
+```json
+{
+    "files.eol": "\n",
+}
+```
+
+CRLF
+
+```json
+{
+    "files.eol": "\r\n",
+}
+```
+
+**Resultado en  VSCode:**
+
+![alt text](https://github.com/ferch01992/assets/blob/master/images/template-webpack-5/LF.png?raw=true)
+
+<p align="right"><a href="#top">volver arriba 🔼</a></p>
+
+--------------------------------------------------------------------------------
 
 ## **Instalación de dependencias**
 
@@ -124,56 +161,69 @@ npm i ó npm install
 
 <p align="right"><a href="#top">volver arriba 🔼</a></p>
 
----
+--------------------------------------------------------------------------------
 
 ## **Configuración de Eslint y Prettier en VSCode**
 
-> Colocar el siguiente código en el archivo `settings.json` de VSCode.
+>Archivo `.vscode/settings.json` de VSCode.
 
 ```json
 {
-  "css.validate": false,
-  "less.validate": false,
-  "scss.validate": false,
-  "stylelint.validate": ["css", "scss"],
+  // configuración de Eslint y Prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.jsxBracketSameLine": false,
   "editor.formatOnSave": true,
+
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+
   "editor.codeActionsOnSave": {
     "source.fixAll.stylelint": true
-  }
+  },
+
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": ["css", "scss"],
 }
 ```
 
 **NOTA:** En caso de utilizar otro editor de código como
 **_[Subliem text](https://www.sublimetext.com/)_** ó
-**_[Vim](https://www.vim.org/), etc._** revisar la documentación de **_[ESLint](https://eslint.org/)_** y **\*[Prettier](https://prettier.io/)**
+**_[Vim](https://www.vim.org/), etc._** revisar la documentación de **_[ESLint](https://eslint.org/)_** y **_[Prettier](https://prettier.io/)_**
 
 <p align="right"><a href="#top">volver arriba 🔼</a></p>
 
----
+--------------------------------------------------------------------------------
 
 ## **Ejecución del proyecto en modo desarrollo**
 
 > Ejecutar el siguiente comando en tu terminal.
 
+_**SO Windows**_
+```sh
+npm run dev:win
+```
+
+_**SO Linux**_
 ```sh
 npm run dev
 ```
 
-URL de compilción: [![localhost](https://img.shields.io/badge/127.0.0.1:8080-blue)](http://127.0.0.1:8080)
+_**URL de compilción:**_ [![localhost](https://img.shields.io/badge/127.0.0.1:8080-blue)](http://127.0.0.1:8080)
+
+![alt text](https://github.com/ferch01992/assets/blob/master/images/template-webpack-5/home-template-webpack-5.jpg?raw=true)
 
 <p align="right"><a href="#top">volver arriba 🔼</a></p>
 
----
+--------------------------------------------------------------------------------
 
 ## **Estandar general de desarrollo**
 
----
+--------------------------------------------------------------------------------
+
 
 ### **Nombre y extenciones de archivos**
 
@@ -197,7 +247,8 @@ nameFileExample.js
 
 <p align="right"><a href="#top">volver arriba 🔼</a></p>
 
----
+--------------------------------------------------------------------------------
+
 
 ### **Nombre de variables**
 
@@ -215,7 +266,7 @@ const NOMBRE_VARIABLE = null;
 
 <p align="right"><a href="#top">volver arriba 🔼</a></p>
 
----
+--------------------------------------------------------------------------------
 
 ### **Funciones sin eventos**
 
@@ -229,7 +280,7 @@ nombreFuncion( ) {
 
 <p align="right"><a href="#top">volver arriba 🔼</a></p>
 
----
+--------------------------------------------------------------------------------
 
 ### **Funciones con eventos**
 
@@ -249,7 +300,7 @@ handlerNombreFuncion( ) {
 
 <p align="right"><a href="#top">volver arriba 🔼</a></p>
 
----
+--------------------------------------------------------------------------------
 
 ### **Idemtación**
 
@@ -257,7 +308,7 @@ handlerNombreFuncion( ) {
 
 <p align="right"><a href="#top">volver arriba 🔼</a></p>
 
----
+--------------------------------------------------------------------------------
 
 ### **Importación y Exportación de componente**
 
@@ -271,7 +322,7 @@ import NameComponent from ‘./ruta/ruta’
 
 <p align="right"><a href="#top">volver arriba 🔼</a></p>
 
----
+--------------------------------------------------------------------------------
 
 ### **Store**
 
