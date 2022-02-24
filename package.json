@@ -1,13 +1,13 @@
 {
-  "name": "template",
+  "name": "template-webpack-5",
   "version": "1.0.0",
   "description": "template app react",
   "main": "index.js",
   "scripts": {
-    "build": "SET VERSION_APP=%npm_package_version%& SET NAME_APP=%npm_package_name%& webpack --config webpack/webpack.prod.js",
-    "buildd": "NAME_APP=$npm_package_name VERSION_APP=$npm_package_version webpack --config webpack/webpack.prod.js",
-    "de": "NAME_APP=$npm_package_name VERSION=$npm_package_version webpack-dev-server --progress --config webpack/webpack.dev.js",
-    "dev": "SET VERSION_APP=%npm_package_version%& SET NAME_APP=%npm_package_name%& webpack-dev-server --progress --config webpack/webpack.dev.js",
+    "build": "NAME_APP=$npm_package_name VERSION_APP=$npm_package_version webpack --config webpack/webpack.prod.js",
+    "build:win": "SET VERSION_APP=%npm_package_version%& SET NAME_APP=%npm_package_name%& webpack --config webpack/webpack.prod.js",
+    "dev": "NAME_APP=$npm_package_name VERSION=$npm_package_version webpack-dev-server --progress --config webpack/webpack.dev.js",
+    "dev:win": "SET VERSION_APP=%npm_package_version%& SET NAME_APP=%npm_package_name%& webpack-dev-server --progress --config webpack/webpack.dev.js",
     "lint:check": "eslint src/** .",
     "lint:fix": "eslint . --fix",
     "style:check": "stylelint src/assets/styles/**/*.scss",

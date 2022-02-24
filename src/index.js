@@ -12,7 +12,7 @@ import configStore from './store/configStore.js';
 const { persistor, store } = configStore;
 
 console.log(
-  '%c<== F . L . C ==>',
+  '%c<== Template Webpack 5 ==>',
   'color:#FF8A71;font-size:2rem;font-weight:bold;'
 );
 
